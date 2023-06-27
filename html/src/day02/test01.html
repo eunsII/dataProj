@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>둘째날 첫번째 페이지!</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /*
+        ==> 이것은 css 주석
+        style태그는 태그에 부여한 style속성이 빠져나온 형태..
+        이때 이 태그는 반드시 head 태그 내에 만들어져야 한다.
+    */
+        /* 
+        . 을 붙이는 경우는 클래스이름으로 태그를 선택할 때... 
+
+        ==> 클래스이름이 title 인 모든 태그를 선택해서
+        {} (중괄호) 내에 정의 된 속성을 적용하세요...
+
+        만약 단어만 기술하면 해당 단어의 태그를 선택한다.
+
+        ---> 모든 h1태그를 선택하고 싶다.
+            h1 { 속성들.... }
+        
+        {} 내에 작성하는 내용들은 태그의 style속성의 속성값으로 정의한
+        "" 내의 내용을 기술하면 된다.
+    */
+        
+        .title {
+            text-align: center;
+            /* background-color: orange;
+            color: blueviolet; */
+        }
+        
+        .tcolor {
+            color: blueviolet;
+        }
+        
+        .tbgcolor {
+            background-color: orange;
+        }
+        
+        .ft30 {
+            font-size: 30pt;
+        }
+        
+        #hh {
+            /* 아이디 속성값으로 태그를 선택할 때는 [ #아이디이름 ] 의 형식으로 선택한다. 
+                ==> 아이디 이름이 hh인 태그들을 모두선택...
+            */
+            display: inline-block;
+            width: 300px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+        
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; background-color: orange; color: blueviolet;">1st Page</h1>
+    <h3 style="text-align: center; background-color: orange; color: blueviolet;">2nd title</h3>
+    <hr>
+    <h2 class="title tbgcolor" id="hh">h2 tag</h2>
+    <h4 class="title ft30" id="hh4">h4 tag</h4>
+    <!--
+        style 속성
+        : 해당 태그가 어떤 모양으로 만들어져야 되는지를 정의하는 속성
+            text-align          : 내용물의 정렬방식을 정의 하는 속성
+            background-color    : 해당 태그의 배경색을 정의하는 속성
+            width               : 해당 태그의 너비를 정의하는 속성
+            height              : 해당 태그의 높이를 정의하는 속성
+            color               : text의 색상을 정의하는 속성
+            ...
+    -->
+    <script type="text/javascript">
+        var txt = document.getElementById('hh').innerHTML;
+        alert(txt);
+    </script>
+</body>
+
+</html>
