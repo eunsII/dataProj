@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Input Tag</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!--
+        https://nid.naver.com/user2/join/begin?token_sjoin=UgIfbQ8y1RCe3wO0&langSelect=ko_KR&checkRealname=Y&termsLocation=Y&termsEmail=Y
+    
+        ==> 웹 문서 : https://nid.naver.com/user2/join/begin
+            전달데이터(파라미터) : ?token_sjoin=UgIfbQ8y1RCe3wO0&langSelect=ko_KR&checkRealname=Y&termsLocation=Y&termsEmail=Y
+                        ? : 이후는 서버에 전달하는 데이터부분입니다.를 알려주는 기호
+
+                        파라미터는 반드시 "키값=데이터" 의 형식으로 전달해야 한다.
+
+                        ==> 파라미터 분석
+                            token_sjoin=UgIfbQ8y1RCe3wO0
+                            langSelect=ko_KR
+                            checkRealname=Y
+                            termsLocation=Y
+                            termsEmail=Y
+                            로 총 5개의 데이터를 서버에 전달하는 형식이다.
+                            = 기준 왼쪽에 위치한 문자열이 키값에 해당하고
+                            = 기준 오른쪽에 위치한 문자열이 데이터에 해당한다.
+                            이때 반드시 키값과 데이터가 한쌍이 되어서 전달이 되어야 한다.
+
+                            그런데
+                                입력태그에서는 파라미터의 키값을 name 이라는 속성의 값으로 지정한다.
+    -->
+    <form method="GET" action="result.html" name="frm">
+        <span>아이디 : </span> <input type="text" name="id"><br>
+        <span>비밀번호 : </span> <input type="password" name="password"><br>
+        <input type="reset" value="reset"> <input type="submit" value="로그인">
+    </form>
+</body>
+
+</html>
