@@ -29,10 +29,21 @@
                             그런데
                                 입력태그에서는 파라미터의 키값을 name 이라는 속성의 값으로 지정한다.
     -->
-    <form method="GET" action="result.html" name="frm">
-        <span>아이디 : </span> <input type="text" name="id"><br>
-        <span>비밀번호 : </span> <input type="password" name="password"><br>
+    <form method="POST" action="result.html" name="frm">
+        <span>아이디 : </span>
+        <input type="text" name="id" size="50" placeholder="아이디를 입력하세요!" required><br>
+        <span>비밀번호 : </span>
+        <input type="password" name="pw" size="20" placeholder="비밀번호를 입력하세요!" required><br>
         <input type="reset" value="reset"> <input type="submit" value="로그인">
+    </form>
+    <form method="GET" action="result.html" name="frm2">
+        <input type="hidden" name="no" value="1001"><br>
+        <input type="text" name="no1"><br>
+        <textarea name="body" rows="20" cols="20" style="resize: none;"></textarea>
+        <input type="button" value="버튼">
+        <button id="btn" type="button">버튼2</button>
+        <button id="btn" type="submit">제출</button>
+        <button id="btn" type="reset">다시작성</button>
     </form>
 </body>
 
