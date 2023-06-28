@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>base tag 연습</title>
+    <meta charset="UTF-8">
+    <!-- <base href="https://www.naver.com" target="_blank"> -->
+    <style type="text/css">
+        body {
+            font-size: 18pt;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="">naver</a><br>
+    <a href="javascript:alert('hello');">실 행1</a><br>
+    <a href="javascript:alert('실행2~~!')">실 행2</a><br>
+    <a href="https://www.google.com" target="_self">Google1</a><br><br>
+    <a href="https://www.google.com" target="_blank">Google2</a>
+    <!--
+        script 언어에서는 
+        문자와 문자열을 구분하지 않는 경향이 있다.
+        따라서 문자를 표현하는 기호 '' 와 
+        문자열을 표현하는 기호 "" 를 구분하지 않고
+        모두 문자데이터를 표현할 수 있다.
+
+        만약 문자열에서 따옴표를 표현해야 할 경우
+        예 ]
+            'blackpink's show'
+            이런 문자열의 경우
+            blackpink 이후의 문자열의 처리에 문자가 발생한다.
+            따라서 이런경우는 다른 모양의 따옴표로 처리해주거나
+            ==> "blackpink's show" ==> '는 문자로서 처리된다.
+
+            두번째 방법은
+            한가지의 따옴표만 사용을 해주는데
+            예 ]
+                'blackpink\'s show'
+            '문자로서 처리가 되도록 밝혀주면 된다.
+            그역할을 하는 특수문자가 \ 이고
+            이 \를 escape 문자라 부른다.
+
+            참고 ]
+                escape 문자를 사용하는 경우
+
+                줄바꿈기호    : \n
+                엔터키       : \r\n
+                탭키        : \t
+                따옴표      : \' 또는 \"
+        참고 ]
+            ;  - 토큰 기호
+                 토큰이란 명령이 처리되는 단위
+                 하나의 명령이 끝났음을 알려주는 기호
+    -->
+</body>
+
+</html>
