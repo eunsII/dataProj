@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FieldSet Tag</title>
+    <meta charset="UTF-8">
+    <style>
+        .fr {
+            width: 650px;
+            margin: auto;
+        }
+        
+        .title {
+            height: 62px;
+            color: white;
+            line-height: 200%;
+            text-align: center;
+            background-color: rgb(52, 152, 219)
+        }
+        
+        .content {
+            padding: 10px;
+            background-color: rgb(240, 240, 240);
+        }
+        
+        .btn {
+            border: 0px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fr">
+        <h1 class="title">정보 입력</h1>
+
+        <form method="GET" action="../day03/result.html">
+            <div class="content">
+                <fieldset>
+                    <legend>기본정보</legend>
+                    <div>
+                        <label for="name">이 름 : </label>
+                        <input type="text" name="name" id="name" placeholder="이름을 입력하세요!" required>
+                    </div>
+                    <div>
+                        <label for="mail">메 일 : </label>
+                        <input type="text" name="mail" id="mail" placeholder="메일주소를 입력하세요!" required>
+                    </div>
+                    <div>
+                        <label for="tel">전화번호 : </label>
+                        <input type="text" name="tel" id="tel" placeholder="전화번호를 입력하세요!" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>부가 내용</legend>
+                    <div>
+                        <label for="msg">메세지 : </label>
+                        <span>
+                            <textarea name="msg" id="msg" rows="7" cols="30"
+                                        style="resize: none;"
+                                        placeholder="추가 메세지 입력!"></textarea>
+                        </span>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div style="margin-top: 25px; padding: 0px;">
+                <input class="btn" type="reset" value="다시작성" style="width: 50%; float: left; background-color: orange;">
+                <input class="btn" type="submit" value="submit" style="width: 50%; float: right; background-color:rgb(52, 152, 219);">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
