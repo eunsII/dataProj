@@ -23,16 +23,64 @@
             background-color: rgb(240, 240, 240);
         }
         
-        .btn {
+        .btn,
+        .btn1 {
             border: 0px;
             height: 30px;
+        }
+        
+        .content label {
+            display: block;
+            width: 130px;
+            float: left;
+            text-align: right;
+        }
+        
+        .content input {
+            width: 300px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        
+        .content [type="radio"] {
+            width: 30px;
+            margin-left: 50px;
+        }
+        
+        input[type="checkbox"] {
+            width: 10px;
+            margin: 10px;
+            margin-left: 20px;
+        }
+        
+        .cbox {
+            width: 300px;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .a-button {
+            text-align: center;
+            clear: both;
+            color: white;
+            background-color: rgb(204, 255, 0);
+        }
+        
+        .btn {
+            cursor: pointer;
+        }
+        
+        select {
+            width: 300px;
+            margin-left: 10px;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <div class="fr">
-        <h1 class="title">정보 입력</h1>
+        <h1 class="title" id="title">정보 입력</h1>
 
         <form method="GET" action="../day03/result.html">
             <div class="content">
@@ -50,14 +98,52 @@
                         <label for="tel">전화번호 : </label>
                         <input type="text" name="tel" id="tel" placeholder="전화번호를 입력하세요!" required>
                     </div>
+                    <div>
+                        <label>성 별 : </label>
+                        <input type="radio" name="gen" value="M"> 남자
+                        <input type="radio" name="gen" value="F"> 여자
+                        <!-- 
+                            radio 버튼은 하나로 처리될 것들이 반드시 같은 form태그 내에 있어야 하고
+                            반드시 같은 name 속성값을 가져야 한다. 
+                            ==> 같은 name 속성값이 부여된 태그들 중 하나만 선택...
+                        -->
+                    </div>
+                    <div>
+                        <label>학 년 : </label>
+                        <input type="radio" name="grade" value="1"> 1
+                        <input type="radio" name="grade" value="2"> 2
+                        <input type="radio" name="grade" value="3" checked> 3
+                        <input type="radio" name="grade" value="4"> 4
+                    </div>
+                    <div>
+                        <label>학 과 : </label>
+                        <select name="dept">
+                            <option value="computer">컴퓨터공학과</option>
+                            <option value="economic">경영학과</option>
+                            <option value="kor">국문학과</option>
+                            <option value="accounting">회계학과</option>
+                            <option value="" selected># 학과선택 #</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>수강과목 : </label>
+                        <div class="cbox">
+                            <input type="checkbox" name="subj" value="html"> HTML
+                            <input type="checkbox" name="subj" value="css" checked> CSS
+                            <input type="checkbox" name="subj" value="js"> JavaScript
+                            <input type="checkbox" name="subj" value="jq"> JQuery
+                        </div>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>부가 내용</legend>
                     <div>
-                        <label for="msg">메세지 : </label>
+                        <div style="width: 130px; float: left; text-align: right;">
+                            <label for="msg">메세지 : </label>
+                        </div>
                         <span>
-                            <textarea name="msg" id="msg" rows="7" cols="30"
-                                        style="resize: none;"
+                            <textarea name="msg" id="msg" rows="7" cols="36"
+                                        style="resize: none; margin-left: 10px;"
                                         placeholder="추가 메세지 입력!"></textarea>
                         </span>
                     </div>
@@ -65,11 +151,40 @@
             </div>
 
             <div style="margin-top: 25px; padding: 0px;">
-                <input class="btn" type="reset" value="다시작성" style="width: 50%; float: left; background-color: orange;">
+                <input class="btn1" type="reset" value="다시작성" style="width: 50%; float: left; background-color: orange;">
                 <input class="btn" type="submit" value="submit" style="width: 50%; float: right; background-color:rgb(52, 152, 219);">
             </div>
+
+            <div style="margin-top: 25px; padding: 0px;">
+
+                <input class="btn" type="button" value="button1" onclick="alert('Hello!')" style="width: 50%; float: left; background-color: rgb(242, 0, 255);">
+
+                <input id="btn2" class="btn" type="button" value="button2" onclick="changeColor()" style="width: 50%; float: right; background-color:rgb(0, 255, 174);">
+
+            </div>
+            <a href="javascript:changeColor();" style="clear: both;">
+                <h1 class="a-button">a tag</h1>
+            </a>
+            <a href="javascript:changeColor2();" style="clear: both;">
+                <h1 class="a-button" id="h1">a tag2</h1>
+            </a>
         </form>
     </div>
+
+    <script type="text/javascript">
+        /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                document.getElementById('btn2').onclick = function() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    document.getElementById('title').style.backgroundColor = 'purple';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+        function changeColor() {
+            document.getElementById('title').style.backgroundColor = 'purple';
+        };
+
+        function changeColor2() {
+            document.getElementById('h1').style.backgroundColor = 'orange';
+        };
+    </script>
 </body>
 
 </html>
