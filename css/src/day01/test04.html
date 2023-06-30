@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>가상 선택자</title>
+    <meta charset="UTF-8">
+    <style>
+        a:visited {
+            color: gray;
+            text-decoration: line-through;
+        }
+        
+        a:link {
+            color: aquamarine;
+            text-decoration: none;
+        }
+        
+        a:active {
+            font-size: 20pt;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            border: 1px solid purple;
+        }
+        
+        .d1 {
+            width: 650px;
+            height: 100px;
+            display: block;
+            border: 0px;
+            text-align: center;
+        }
+        
+        div:hover {
+            background-color: pink;
+            color: blue;
+            text-align: center;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+        
+        div:active {
+            background-color: cadetblue;
+            width: 300px;
+            height: 300px;
+        }
+        
+         :focus {
+            background-color: aquamarine;
+        }
+        
+        #pw:focus {
+            background-color: blueviolet;
+        }
+        
+        label[for="id"] {
+            color: rgb(255, 68, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="test03.html">test03</a><br>
+    <a href="test05.html">test05</a><br>
+    <div>
+        div1
+    </div>
+    <span class="d1">
+        <label for="id">I D : </label>
+        <input type="text" name="id" id="id">
+    </span>
+    <span class="d1">
+        <label for="pw">P W : </label>
+        <input type="password" name="pw" id="pw">
+    </span>
+</body>
+
+</html>
