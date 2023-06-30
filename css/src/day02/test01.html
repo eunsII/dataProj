@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Input Tag</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        #frm {
+            width: 650px;
+            text-align: center;
+            margin: auto;
+        }
+        
+        label {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+        }
+        
+        #frm div {
+            margin-bottom: 10px;
+        }
+        
+        button {
+            height: 30px!important;
+            border: 0px;
+        }
+        
+         :enabled {
+            background-color: aquamarine;
+        }
+        
+         :disabled {
+            background-color: brown;
+            color: white;
+        }
+        
+         :focus {
+            background-color: rgb(255, 183, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <form method="GET" action="../../../html/src/day03/result.html" id="frm">
+        <div>
+            <label for="id">I D : </label>
+            <input type="text" name="id" id="id">
+        </div>
+        <div>
+            <label for="pw">P W : </label>
+            <input type="password" name="pw" id="pw">
+        </div>
+        <div>
+            <label for="nick">NICK : </label>
+            <input type="text" name="nick" id="nick" value="dool2" disabled>
+            <!-- 
+                disabled : 화면에 value속성값이 보여지기는 하지만
+                            수정불가능하고 
+                            전달할 수도 없다. 
+            -->
+        </div>
+        <div>
+            <label for="tel">TEL : </label>
+            <input type="text" name="tel" id="tel" value="010-1111-1111" readonly>
+            <!--  
+                readonly : 화면에 보여지긴 하지만
+                            수정할 수 없고
+                            전달은 할 수 있다.
+            -->
+        </div>
+        <div>
+            <input type="hidden" name="mail" id="mail" value="dooly@kdt.com">
+            <!-- 
+                type="hidden" : 화면에 보여지면 곤란하고
+                                서버에 전달은 해야되는 데이터는
+                                이런 방식으로 전달한다.
+             -->
+        </div>
+        <div>
+            <button type="reset" style="width: 50%; height: 20px; float: left; background-color: orange;">
+            reset
+            </button>
+            <button type="submit" style="width: 50%; height: 20px; float: left; background-color: rgb(0, 179, 255);">
+            submit
+            </button>
+        </div>
+    </form>
+    <!-- 
+        ?id=dooly&pw=12345&tel=010-1111-1111&mail=dooly%40kdt.com
+        
+        ==>
+        id=dooly
+        pw=12345
+        tel=010-1111-1111
+        mail=dooly%40kdt.com
+     -->
+</body>
+
+</html>
