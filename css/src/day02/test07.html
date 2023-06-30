@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Overflow</title>
+    <meta charset="UTF-8">
+    <style>
+        .fr {
+            max-width: 650px;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .title {
+            padding: 10px;
+            font-size: 20pt;
+            background-color: rgb(250, 0, 254);
+            color: white;
+        }
+        
+        .img {
+            width: 200px;
+            height: auto;
+            position: relative;
+            bottom: 10px;
+        }
+        
+        .imgbox {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border: 5px solid lightgray;
+            border-radius: 50%;
+            box-shadow: 7px 7px 24px 0px gray;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fr">
+        <h1 class="title">Overflow</h1>
+        <div class="imgbox">
+            <img src="../../../html/src/image/choppa.jpeg" class="img">
+        </div>
+    </div>
+</body>
+
+</html>
