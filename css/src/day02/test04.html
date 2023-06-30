@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Border Radius</title>
+    <meta charset="UTF-8">
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .content {
+            max-width: 650px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-width: medium;
+            border-style: double;
+            border-color: red;
+        }
+        
+        .box:first-child {
+            border-radius: 50%;
+            margin-left: 50px;
+        }
+        
+        .box:last-child {
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 30px 10px 50px 5px;
+        }
+        
+        .box:nth-child(2) {
+            width: 300px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="box">d1</div>
+        <div class="box">d1-1</div>
+        <div class="box">d2</div>
+    </div>
+</body>
+
+</html>

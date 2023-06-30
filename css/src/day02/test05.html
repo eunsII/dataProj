@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Position</title>
+    <meta charset="UTF-8">
+    <style>
+        .d1 {
+            max-width: 650px;
+            margin: 20px auto;
+        }
+        
+        .sp {
+            position: static;
+            left: 30px;
+            width: 400px;
+            height: 50px;
+            background-color: cyan;
+        }
+        
+        .rp1 {
+            position: relative;
+            left: 30px;
+            top: -10px;
+            background-color: orange;
+            width: 400px;
+            height: 50px;
+        }
+        
+        .rp2 {
+            position: relative;
+            left: 60px;
+            top: 20px;
+            background-color: lightgreen;
+            width: 400px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <h1>position style relative</h1>
+        <p class="sp">정적 위치 설정 적용</p>
+        <div class="rp1">상대 위치 설정 적용 1</div>
+        <p class="rp2">상대 위치 설정 적용 2</p>
+    </div>
+</body>
+
+</html>

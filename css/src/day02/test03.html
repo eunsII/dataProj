@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>조합 선택자</title>
+    <meta charset="UTF-8">
+    <style>
+        body>div>h3 {
+            color: red;
+        }
+        /* 
+        div :first-child {
+
+        }
+        h3:first-child {
+
+        }
+
+        div > h3 {}
+        */
+        
+        body>p {
+            /* p:nth-child(2) : 형제들중 둘째인 p 태그 선택 */
+            /* body 태그의 자식태그 중 p 태그 선택 */
+            color: green;
+            background-color: yellow;
+        }
+        
+        body>p:active {
+            height: 30px;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+        
+        body>h3>tel>home {
+            /* home {}, tel > home {} */
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>자식 선택자 - 1</h3>
+    </div>
+    <p>자식 선택자 - 2</p>
+    <h3>
+        <sno>123456</sno><br>
+        <std>제니</std><br>
+        <tel>
+            <office>044-1234-5678</office><br>
+            <home>010-1111-1111</home>
+        </tel>
+    </h3>
+</body>
+
+</html>
