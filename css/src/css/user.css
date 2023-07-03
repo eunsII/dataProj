@@ -25,3 +25,15 @@
     width: 200px;
     height: 100px;
 }
+
+/* label */
+.label14 {
+    font-size: 14pt;
+    font-weight: bold;
+    line-height: 200%;
+}
+
+/* padding */
+.mgl10 {
+    margin-left: 10px;
+}
