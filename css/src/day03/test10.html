@@ -10,18 +10,24 @@
 <body>
     <div class="w3-content maxw650">
         <h1 class="w3-blue w3-card-4 w3-center w3-padding w3-margin-top">로그인</h1>
-        <div class="w3-col w3-white w3-padding-24 w3-card-4 w3-margin-top">
-            <div class="w3-col w3-margin-bottom">
-                <label for="id" class="w3-quarter w3-right-align label14 w3-text-grey">아이디 : </label>
-                <input type="text" name="id" id="id"
-                        class="w3-col s7 w3-input w3-border w3-border-blue mgl10">
+        <form method="GET" action="" name="frm" id="frm">
+            <div class="w3-col w3-white w3-padding-24 w3-card-4 w3-margin-top">
+                <div class="w3-col w3-margin-bottom">
+                    <label for="id" class="w3-quarter s3 w3-right-align label14 w3-text-grey mgr10">아이디 : </label>
+                    <input type="text" name="id" id="id"
+                            class="w3-col s12 m7 w3-input w3-border w3-border-blue">
+                </div>
+                <div class="w3-col">
+                    <label for="pw" class="w3-quarter w3-right-align label14 w3-text-grey mgr10">비밀번호 : </label>
+                    <input type="text" name="pw" id="pw"
+                            class="w3-col s12 m7 w3-input w3-border w3-border-blue">
+                </div>
             </div>
-            <div class="w3-col">
-                <label for="pw" class="w3-quarter w3-right-align label14 w3-text-grey">비밀번호 : </label>
-                <input type="text" name="pw" id="pw"
-                        class="w3-col s7 w3-input w3-border w3-border-blue mgl10">
+            <div class="w3-col w3-center w3-margin-top w3-card-4">
+                <button type="reset" class="w3-half w3-button w3-orange w3-hover-pink">reset</button>
+                <button type="submit" class="w3-half w3-button w3-blue w3-hover-aqua">login</button>
             </div>
-        </div>
+        </form>
     </div>
 </body>
 </html>
