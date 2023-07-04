@@ -1,0 +1,50 @@
+.inblock {
+    display: inline-block;
+}
+
+.maxw650 {
+    max-width: 650px;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.box1 {
+    width: 100px;
+    height: 50px;
+}
+
+.box100 {
+    width: 100px;
+    height: 100px;
+}
+
+.box200 {
+    width: 200px;
+    height: 200px;
+}
+
+.box2 {
+    width: 200px;
+    height: 100px;
+}
+
+/* label */
+.label14 {
+    font-size: 14pt;
+    font-weight: bold;
+    line-height: 200%;
+}
+
+/* padding */
+.mgl10 {
+    margin-left: 10px;
+}
+.mgr10 {
+    margin-right: 10px;
+}
+
+.mg10 {
+    margin: 10px; 
+}
