@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+/*
+    삼항 조건 처리 연산자
+        조건이 참인 경우와 거짓인 경우의 결과값을 만들어주는 연산자
+        형식 ]
+
+            변수 = (조건식) ? (참 일 때 반환값) : (거짓일 때 반환값);
+
+    참고 ]
+        자바스크립트에서 데이터 입력받는 방법
+
+            변수 = prompt('메세지');
+
+    참고 ]
+        정수형태의 문자열을 정수로 변환하는 방법
+            '123'   7354563.445
+            parseInt(문자열);
+*/
+        var sno = prompt('정수를 입력하세요!');
+        // alert(sno + ' - ' + (typeof sno));
+
+        // 입력받은 숫자가 홀수인지 짝수인지 판별하세요.
+        // 출력형식 : 123 - 홀수
+
+        // ==> 2로 나눈 나머지가 0인지 아닌지 에 따라서 처리해주면 된다.
+        // 정수로 변환
+        var no = parseInt(sno);
+        var msg = (no % 2 == 0) ? '짝수' : '홀수';
+        alert(sno + ' - ' + msg);
+
+        msg = (no == 0) ? '0' : (
+            (no % 2 == 0) ? '짝수' : '홀수'
+        );
+        document.write('입력 받은 숫자 [ ' + sno + 
+                        ' ] 는 [ ' + msg + ' ] 입니다.<br>');
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // var kor; // ==> 자바스크립트 엔진이 해석할 때 추가하는 부분(변수 호이스팅)
+        console.log('스크립트 첫 행 국어점수 : ' + kor); // 변수 호이스팅
+        
+        function setGrade(){
+            kor = 95; // 함수내에서 var 키워드 없이 변수를 만들면 자동 전역변수가 된다.
+        }
+        
+        var kor = 100;
+        console.log('함수 호출 전 국어점수 : ' + kor); // 1 - 100
+        setGrade();
+        console.log('함수 호출 후 국어점수 : ' + kor); // 2 - 95
+    </script>
+</body>
+</html>

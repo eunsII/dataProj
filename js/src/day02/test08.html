@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            배열 : 여러개의 데이터를 하나의 객체에 담아서 기억하는 자료구조
+
+            만드는 방법 ]
+
+                변수 = [데이터1, 데이터2, .... ];
+
+            꺼내는 방법 ]
+                변수 = 배열변수[위치값];
+
+                ==> 위치값은 0부터 1씩 증가되는 정수로 사용한다.
+        */
+        var member = [
+            'jennie', 'lisa', 'rose', 'jisoo'
+        ];
+
+        document.write(member + '<br>');
+
+        // 첫번째 멤버 꺼내서 출력...
+        var jennie = member[0];
+        document.write('첫번째 멤버 : ' + jennie + '<br>');
+        
+        for(i = 0; i < member.length ; i++ ){
+            document.write( (i + 1)+ ' 번째 멤버 : ' + member[i] + '<br>');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
