@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        document.write('학생 이름 : ' + stdName + '<br>');
+        
+        // 데이터 초기화
+        stdName = '홍길동';
+        comGrade = 96;
+        
+        // 변수 선언
+        var stdName;
+        var comGrade;
+        // ==>  이렇게 해도 에러없이 처리는 되지만 
+        //      사용할 변수는 첫행에서 선언해놓는 것이 좋다.
+        document.write('학생 이름 : ' + stdName + '<br>');
+        document.write('학생 점수 : ' + comGrade + '<br>');
+    </script>
+    
+</body>
+</html>
