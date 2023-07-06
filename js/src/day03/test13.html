@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+</head>
+<body>
+    <div class="w3-content maxw650">
+        <h1 class="w3-deep-orange w3-center">별은 내가슴에...</h1>
+        <div class="w3-container w3-card-4" id="d1"></div>
+    </div>
+    <script type="text/javascript">
+        /*
+            *****
+            *****
+            *****
+            *****
+            *****
+        */
+
+        document.getElementById('d1').innerHTML += '<p><b>1.</b></p>';
+        for(i = 0 ; i < 5 ; i++ ){
+            var str = '';
+            for(j = 0 ; j < 5 ; j++){
+                str += '*';
+            }
+            document.getElementById('d1').innerHTML += '<p style="margin: 0px;">' + str + '</p>';
+        }
+
+        /*
+            2.
+            *       - (0, 0)
+            **      - (1, 1)
+            ***     - (2, 2)
+            ****    - (3, 3)
+            *****   - (4, 4)
+        */
+        document.getElementById('d1').innerHTML += '<p><b>2.</b></p>';
+        for(i = 0 ; i < 5 ; i++ ){
+            var str = '';
+            for(j = 0 ; j <= i ; j++){
+                str += '*';
+            }
+            document.getElementById('d1').innerHTML += '<p style="margin: 0px;">' + str + '</p>';
+        }
+        /*
+            3.
+            *****   - 0     - 5     - (5 - 0)
+            ****    - 1     - 4     - (5 - 1)
+            ***     - 2     - 3     - (5 - 2)
+            **      - 3
+            *       - 4     - 1     - (5 - 4)
+        */
+        document.getElementById('d1').innerHTML += '<p><b>3.</b></p>';
+        for(i = 0 ; i < 5 ; i++ ){
+            var str = '';
+            for(j = 0 ; j < (5 - i) ; j++ ){
+                str += '*';
+            }
+            document.getElementById('d1').innerHTML += '<p style="margin: 0px;">' + str + '</p>';
+        }
+        
+
+        /*
+            4.
+            *****
+             ****
+              ***
+               **
+                *
+        */
+
+        /*
+            5.
+                *
+               **
+              ***
+             ****
+            *****
+        */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            문제 ]
+                두 사람이 1950m의 산을 등산을 하는데
+                a는 0.75m/s 로 이제 등산을 시작하고
+                b는 1.03m/s 로 정상에서 하산하려고 한다.
+
+                두사람은 몇초 후에 만나게 되는지 출력하세요.
+        */
+
+        var sec = 0;
+        var a = 0;
+        var b = 1950;
+
+        while(true){
+            a = 0.75 * sec;
+            b = 1950 - (1.03 * sec);
+
+            if(a >= b){
+                break;
+            }
+            sec++;
+        }
+
+        document.write('<h1 style="text-align: center">두 사람은 ' + sec + ' 초 후에 만난다.</h1>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

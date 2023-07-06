@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*
+        while 문 형식
+
+            while(조건식){
+                실행내용...
+            }
+
+            참고 ]
+                while명령은 반복횟수를 제한할 카운터변수가 없으므로
+                반복문이 실행하기 전에 카운터변수를 먼저 만들어둬야 한다. 
+    */
+
+    // 1 ~ 100까지 합을 출력하세요.
+    
+    // 결과값 변수
+    var sum = 0;
+
+    // 카운터 변수를 만든다.
+    var count = 1;
+
+    /*
+    while(count <= 100){
+        sum = sum + count;
+        count++;
+    }
+    */
+
+    while(true) {
+        sum = sum + count++;
+        
+        // 종료조건
+        if(count > 100){
+            break; // break : switch - case, 반복문에서 사용할 수 있는 명령
+                    // 실행중인 반복문 또는 switch - case 명령을 즉시 종료하세요.
+        }
+    }
+    document.write('<h1 style="text-align: center">1부터 100까지 합은 '+ sum +' 입니다.</h1>');
+    
+    // 짝수들의 합을 구해서 출력하세요.
+    sum = 0;
+    num = 1;
+    while(num <= 100){
+        // numdl 홀수면 다음 숫자로 진행 
+        if(num % 2 != 0){
+            num++;
+            continue;
+        }
+        
+        // 이행을 실행하는 경우는 num이 짝수를 기억하는 경우...
+        sum += num;
+        num++;
+    }
+    document.write('<h1 style="text-align: center">1부터 100까지 짝수들의 합은 '+ sum +' 입니다.</h1>');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
