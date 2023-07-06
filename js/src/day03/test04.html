@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+</head>
+<body>
+    <div class="w3-content maxw650 w3-center">
+        <h1 class="w3-purple w3-padding">If - else 명령</h1>
+        <div>
+            <label for="num" class="w3-col s3 w3-right-align mgr10">정수 입력 : </label>
+            <input type="text" name="num" id="num"
+                    class="w3-col s7 w3-input w3-border">
+            <div class="w3-col w3-button w3-orange w3-margin-top" id="btn">숫자 읽기</div>
+        </div>
+        <div class="w3-col w3-margin-top" id="d1"></div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('btn').onclick = function(){
+            // 할일
+            // 1. 입력태그 선택한다.
+            var el = document.getElementById('num');
+            // ==> el은 선택한 태그 객체를 기억하고 있다.
+
+            // 2. 선택된 입력태그의 내용을 읽는다.
+            // 입력태그의 입력내용을 기억하는 변수가 value 이므로 이 변수를 읽는다.
+            var txt = el.value; // value 변수에 기억된 내용을 txt변수에 기억...
+            //  '123'
+            // 3. 읽은 내용을 정수로 변환한다.
+            // '123' ==> 123
+            var num = parseInt(txt);
+            // 결과값 변수 만들어 둔다.
+            var result = '';
+            // 4. 홀수인지 짝수인지 판별한다.
+            if(num % 2 != 0){
+                // 홀수인 경우
+                result = '홀수';
+            } else {
+                // if() 구문의 조건식이 false인 경우 이 블럭을 실행한다.
+                result = '짝수';
+            }
+            // 5. 결과를 d1태그에 보여준다.
+            // d1 태그 선택
+            document.getElementById('d1').innerHTML = 
+                '<div class="w3-col w3-indigo w3-padding">입력받은 숫자 : ' + num + 
+                                                ' - result : ' + result + '</div>'
+            ;
+            // 6. 입력태그 내용을 지운다.
+            el.value = '';
+        };
+ /*       
+        // javascript 에서는 함수 자체를 변수에 기억시킬 수 있다.
+        // 이때 기억시킨 변수는 함수의 이름이 된다.
+
+        function abc(){
+            alert('abc');
+        }
+
+        var xyz = abc;
+
+        xyz();
+*/
+    </script>
+</body>
+</html>

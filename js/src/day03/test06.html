@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch - case</title>
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+</head>
+<body>
+    <div class="w3-content maxw650 w3-center">
+        <h1 class="w3-purple w3-padding">switch - case 명령</h1>
+        <div>
+            <label for="num" class="w3-col s3 w3-right-align mgr10">정수 입력 : </label>
+            <input type="text" name="num" id="num"
+                    class="w3-col s7 w3-input w3-border">
+            <div class="w3-col w3-button w3-orange w3-margin-top" id="btn">숫자 읽기</div>
+        </div>
+        <div class="w3-col w3-margin-top" id="d1"></div>
+    </div>
+    <script type="text/javascript">
+
+        document.getElementById('btn').onclick = function(){
+            // 작업순서
+            // 1. 입력된 내용을 읽고
+            // 참고 ] JavaScript에서 입력태그의 내용을 읽는 방법은 value속성을 읽으면 된다.
+            var el = document.getElementById('num');
+            var txt = el.value;
+            // 2. 읽은 내용을 정수로 변환하고
+            var num = parseInt(txt);
+            // 3. 홀수인지 짝수인지 판별하고
+            // 결과값 변수
+            var result = '';
+            // 0인지 판별
+            // 주의 ] 조건식 나열은 범위가 좁은 조건부터 나열한다.
+            switch(num){
+                case 0:
+                    result = '0';
+                    break;
+                default:
+                    switch(num % 2){
+                        case 0:
+                            result = '짝수';
+                            break;
+                        default:
+                            result = '홀수';
+                    }
+            }
+            // 조건식에 맞는 블럭을 실행하고 이동하는 위치
+
+            // 4. 결과를 d1 태그에 보여주고
+            document.getElementById('d1').innerHTML = 
+                '<div class="w3-col w3-khaki">입력받은 숫자 : ' + num + 
+                                    ' - result : ' + result + ' </div>'
+            ;
+            
+            // 입력태그 초기화 하고...
+            el.value = '';
+        };
+
+    </script>
+</body>
+</html>
