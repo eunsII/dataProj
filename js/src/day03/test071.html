@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch - case</title>
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+</head>
+<body>
+    <div class="w3-content maxw650 w3-center">
+        <h1 class="w3-purple w3-padding">if - else if 명령</h1>
+        <div>
+            <label for="age" class="w3-col s3 w3-right-align mgr10">나이 입력 : </label>
+            <input type="text" name="age" id="age"
+                    class="w3-col s7 w3-input w3-border">
+            <div class="w3-col w3-button w3-orange w3-margin-top" id="btn">나이 읽기</div>
+        </div>
+        <div class="w3-col w3-margin-top">
+            <div class="w3-col">
+                <div class="w3-col s3 w3-right-align mgr10">입력 나이 : </div>
+                <div class="w3-col s7" id="dage"></div>
+            </div>
+            <div class="w3-col">
+                <div class="w3-col s3 w3-right-align mgr10">연령대 : </div>
+                <div class="w3-col s7" id="agegrade"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        document.getElementById('btn').onclick = function(){
+            // 작업순서
+            // 1. 입력된 내용을 읽고
+            // 참고 ] JavaScript에서 입력태그의 내용을 읽는 방법은 value속성을 읽으면 된다.
+            var el = document.getElementById('age');
+            var txt = el.value;
+            // 2. 읽은 내용을 정수로 변환하고
+            var age = parseInt(txt);
+            // 3. 연령 처리
+            // 결과값 변수
+            var result = '';
+
+            if(age < 10){
+                result = '유년기';
+            } else if(age < 20){
+                // 이부분을 실행하는 경우는
+                // age >= 10 && age < 20 으로 처리되고
+                // 조건식에  age >= 10 && 의 의미가 숨겨져 있다.
+                result = '10대';
+            } else if(age < 30){
+                result = '20대';
+            } else if(age < 40){
+                result = '30대';
+            } else if(age < 50){
+                result = '40대';
+            } else if(age < 60){
+                result = '50대';
+            } else {
+                result = '노년층';
+            }
+
+            // 태그에 내용 채우고
+            document.getElementById('dage').innerHTML = '<b>' + txt + '</b>';
+            document.getElementById('agegrade').innerText = '<b>' + result + '</b>';
+            // 입력태그 초기화 하고...
+            el.value = '';
+        };
+
+    </script>
+</body>
+</html>
