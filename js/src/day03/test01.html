@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>this</title>
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
 </head>
 <body>
-    
+    <div class="w3-content maxw650 w3-center">
+        <h1 class="w3-margin-top w3-blue w3-padding">this</h1>
+        <div class="w3-col w3-margin-top">
+            <div class="w3-button w3-pink w3-hover-red">button1</div>
+            <div class="w3-button w3-pink w3-hover-red">button2</div>
+            <div class="w3-button w3-pink w3-hover-red">button3</div>
+            <div class="w3-button w3-pink w3-hover-red">button4</div>
+            <div class="w3-button w3-pink w3-hover-red">button5</div>
+            <div class="w3-button w3-pink w3-hover-red">button6</div>
+        </div>
+        <div class="w3-margin-top" id="d1"></div>
+    </div>
+    <script type="text/javascript">
+        var el = document.getElementsByClassName('w3-button');
+        function getText(){
+            var txt = this.innerHTML;
+            var tag = document.getElementById('d1').innerHTML;
+            document.getElementById('d1').innerHTML = tag +
+                                    '<h2 class="inblock box1 w3-khaki mgl10"><small>' + 
+                                                                    txt + '</small></h2>';
+        }
+        for(i = 0 ; i < el.length; i++ ){
+            el[i].onclick = getText;
+            el[i].onmouseover = function(){
+                this.classList.remove('w3-pink');
+                this.classList.add('w3-lime');
+            };
+        }
+    </script>
 </body>
 </html>
