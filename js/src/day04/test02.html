@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <style type="text/css">
+        /* w3.css */
+        .maxwidth {
+            max-width: 500px;
+        }
+        
+        /* user.css */
+        .m01 {
+            max-width: 100px;
+        }
+
+        /*
+            link 태그로 속성 정의를 불러와서 적용시키는 경우
+            나중에 작성된 속성으로 적용이 될 것이므로
+            불러오는 순서도 중요하다.
+        */
+    </style>
+    <script type="text/javascript">
+        /*
+            함수 (Function) - 클래스와 무관하게 작성된 함수
+                클래스를 객체화 시키지 않아도 사용할 수 있는 함수
+
+            메서드 (Method) - 클래스 내에서 작성된 함수
+
+        ----------------------------------------------------------
+            함수 정의 형식 ]
+
+                function 함수이름( [ 매개변수1, 매개변수2, ... ] ) {
+                    
+                    실행명령 ...
+                    [ return ] [ 데이터 ];
+                }
+
+            return 명령
+                1. 현재 실행중인 함수를 즉시 종료하세요.
+                2. 반환값이 존재하면 반환값을 반환해주고 실행중인 함수를 즉시 종료하세요.
+                *****
+                return 명령은 함수에 적용되는 명령
+                
+                참고 ]
+                    함수 실행시 반환값이 존재하지 않는 경우는 
+                    return 명령은 생략해도 무방하다.
+
+                참고 ]
+
+                    function abc(a){
+                        if(!a){
+                            // a에 입력된 데이터가 없는 경우
+                            document.write('입력데이터 없음');
+                            return;
+                        }
+                        document.write(a);
+                    }
+                
+                    var num = 10;
+
+                    function setNum(no){
+                        연산식
+                        조건식
+                        반복문
+                    }
+
+                
+        */
+
+        // 두 수를 입력받아서 더한 결과를 반환해주는 함수를 만들어서 
+        // 입력받은 정수 두개의 합을 출력하세요.
+
+        function addNum(a, b){
+            // 반환할 데이터 만들고
+            var sum = a + b;
+            // 반환해주고
+            return sum; // ==> sum에 기억된 데이터를 반환해주고 함수 실행을 즉시 종료하세요.
+            // ==> return a + b; // ==> a + b의 결과를 반환해주고 함수 실행을 즉시 종료하세요.
+        }
+
+        // 함수 호출 방법
+        // 변수 = 함수이름([데이터1, 데이터2,...] );
+        var no1 = parseInt(prompt('첫번째 숫자 : ')); 
+        // parseInt(prompt('첫번째 숫자 : ')) ==> 만약 '123'을 입력한 경우
+        // parseInt('123'); 의 과정으로 처리될 것이고
+        // 반환값은 함수를 호출한 위치에 쓰게된다.
+        var no2 = parseInt(prompt('두번째 숫자 : '));
+
+        // 함수 호출해서 결과값 만들고
+        var result = addNum(no1, no2);
+
+        // 화면에 출력
+        document.write('첫번째 숫자 : ' + no1 + 
+                        '<br>두번째 숫자 : ' + no2 +
+                        '<br>함수 호출 결과 : ' + result
+        );
+
+    </script>
+</head>
+<body>
+    <div class="m01 maxwidth" style="">
+
+    </div>
+</body>
+</html>

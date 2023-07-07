@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var no = 0;
+        /*
+        for(;;){
+            if(no++ >= 10){
+                break;
+            }
+        }
+        */
+        while(true){
+            if(no++ >= 10){
+                break;
+            }
+        }
+        /*
+            javascript에서는
+            0 은 false 로 처리가 될 수 있다.
+            1 은 true 로 처리된다.
+            변수가 비어있는 경우는 false로 처리되고
+            변수에 데이터가 기억된 경우는 true로 처리된다(데이터가 0이 아닌 경우에 한해서..).
+        */
+        alert(no);
+
+        var num;
+        num = 123;
+        num = '123';
+
+        function func01(no3, no1 = 10, no2 = 5){
+            
+            document.write(no1 + ' - ' + no2 + ' - ' + no3 + '<br>');
+        }
+
+        func01(1, 2, 3);
+        // no1 = 1; no2 = 2; no3 = 3;
+        func01('choppa', 10, true);
+        // no1 = 'choppa'; no2 = 10; no3 = true;
+
+        func01(3);
+   </script>
+</head>
+<body>
+    
+</body>
+</html>
