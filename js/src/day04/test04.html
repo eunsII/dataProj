@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>함수를 이용한 구구단</title>
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <style type="text/css">
+        p {
+            font-size: 15px!important;
+        }
+    </style>
+    <script type="text/javascript">
+        var colorlist = [
+            'w3-red', 'w3-deep-orange', 'w3-orange', 'w3-amber', 'w3-yellow',
+            'w3-khaki', 'w3-lime', 'w3-light-green', 'w3-green', 'w3-teal',
+            'w3-light-blue', 'w3-blue', 'w3-indigo', 'w3-deep-purple', 'w3-purple', 'w3-pink'
+        ];
+
+        // 단을 입력받아서 해당 단의 구구단 태그를 만들어주고 문자열로 반환해주는 함수
+        function getDan(dan){
+            // 만약 dan 이 2 인 경우 , 
+            // colorlist[2 - 2]: colorlistf[0] --> w3-red
+            var gugu = '<div class="inblock mg10 w130 w3-card-4">' + 
+                            '<h3 class="' + colorlist[dan - 2] + '" style="margin: 0px!important;">' + 
+                                dan + ' 단</h3>' +
+                                '<div class="w3-col w3-padding">';
+            
+            for(i = 1; i < 10 ; i++ ){
+                gugu += '<p class="mgv5">' + dan + ' x ' + i + ' = ' + (dan * i) + '</p>';
+            }
+            
+            gugu += '</div>';
+            gugu += '</div>';
+
+            // 단 태그 반환해주고
+            return gugu;
+        }
+
+        function ready(){
+            // getDan함수를 이용해서 각단 태그 추가 처리
+            // 8번 반복 처리해야 하므로
+            for(d = 2 ; d < 10 ; d++ ){
+                document.getElementById('d1').innerHTML += getDan(d);
+            }
+
+            function showDan(){
+                // 단 입력받고
+                var dan = parseInt(prompt('단 입력 : '));
+
+                var msgDan = getDan(dan);
+                document.getElementById('d1').innerHTML = msgDan;
+            }
+
+            document.getElementsByTagName('h1')[0].onclick = showDan;
+        }
+    </script>
+</head>
+<body onload="ready()"><!-- onload : body 태그가 완성이 되면 작성한 함수 호출하세요... -->
+    <div class="w3-content maxw650 w3-center">
+        <h1 class="w3-light-green w3-padding">함수를 이용한 구구단 출력</h1>
+        <div class="w3-col" id="d1"></div>
+    </div>
+</body>
+</html>
