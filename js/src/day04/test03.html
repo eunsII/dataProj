@@ -6,8 +6,88 @@
     <title>Function</title>
     <link rel="stylesheet" type="text/css" href="../css/w3.css">
     <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <script type="text/javascript">
+        function ready(){
+            // btn 버튼 클릭 이벤트 추가
+            document.getElementById('btn').onclick = function(){
+                // 모달창 보여지게 처리...
+                document.getElementById('modal').style.display = 'block';
+            };
+
+            function resetTag(){
+                document.getElementById('one').value = '';
+                document.getElementById('two').value = '';
+            }
+
+            // x버튼 클릭 이벤트 추가
+            document.getElementById('closebtn').onclick = function(){
+                // 입력태그의 내용을 초기화
+                /*
+                document.getElementById('one').value = '';
+                document.getElementById('two').value = '';
+                */
+                resetTag();
+                
+                // 모달창을 화면에서 안보이게 처리
+                document.getElementById('modal').style.display = 'none';
+            };
+
+            // reset 버튼 클릭 이벤트 추가
+            document.getElementById('reset').onclick = resetTag;
+            /*
+            document.getElementById('reset').onclick = function(){
+                // 입력태그의 내용을 초기화
+                document.getElementById('one').value = '';
+                document.getElementById('two').value = '';
+                
+                //resetTag();
+            };
+            */
+
+            // 두수를 입력받아서 더한 값을 반환해주는 함수
+            function addInt(a, b){
+                return a + b;
+            }
+
+            // print 버튼 클릭 이벤트 추가
+            document.getElementById('print').onclick = function(){
+                // 할일
+                // 1. 입력태그에 입력된 내용들을 읽는다.
+                var sno1 = document.getElementById('one').value;
+                if(sno1 != 0 && !sno1){ // 데이터 유효성 검사의 일종...
+                    // one 태그에 입력된 내용이 없는 경우
+                    // ==> one 태그로 focus를 이동시킨다.
+                    document.getElementById('one').focus();
+                    //      이 함수 실행을 종료한다.
+                    return;
+                }
+                var sno2 = document.getElementById('two').value;
+                if(sno2 != 0 && !sno2){ // 데이터 유효성 검사의 일종...
+                    // two 태그에 입력된 내용이 없는 경우
+                    // ==> two 태그로 focus를 이동시킨다.
+                    document.getElementById('two').focus();
+                    //      이 함수 실행을 종료한다.
+                    return;
+                }
+                // 2. 입력내용을 정수로 변환해주고
+                var no1 = parseInt(sno1);
+                var no2 = parseInt(sno2);
+                // 3. 함수 호출해서 결과값 만들고
+                var result = addInt(no1, no2);
+                // 4. 내용을 fr 태그에 내용을 덧붙여주고
+                var msg =   '<div class="w3-col w3-border-bottom"><p class="w3-third">첫번째 숫자 : '+ sno1 + '</p>' +
+                            '<p class="w3-third">두번째 숫자 : '+ sno2 + '</p>' +
+                            '<p class="w3-third">계산 결과 : '+ result + '</p></div>';
+                document.getElementById('fr').innerHTML += msg;
+                // 5. 입력태그 내용 지우고...
+                resetTag();
+                // 6. 모달창 안보이게 처리하고
+                document.getElementById('modal').style.display = 'none';
+            };
+        }
+    </script>
 </head>
-<body>
+<body onload="ready()">
     <div class="w3-content maxw650">
         <h1 class="w3-blue w3-padding w3-card-4 w3-center">함수 연습</h1>
         <div class="w3-col w3-margin-bottom">
@@ -16,24 +96,24 @@
         <div class="w3-col w3-padding" id="fr"></div>
     </div>
     <div id="modal" class="w3-modal">
-        <div class="w3-modal-content">
-            <header class="w3-container w3-teal"> 
-                <span class="w3-button w3-display-topright">&times;</span>
+        <div class="w3-modal-content" style="max-width: 500px;">
+            <header class="w3-container w3-pink"> 
+                <span class="w3-button w3-hover-pink w3-display-topright" id="closebtn">&times;</span>
                 <h2 class="w3-center">Modal Header</h2>
             </header>
-            <div class="w3-container">
+            <div class="w3-container" style="margin-bottom: 0px!important;">
                 <div class="w3-col w3-margin">
-                    <label for="one" class="w3-col s3 w3-right-algin mgr10">첫번째 숫자 : </label>
+                    <label for="one" class="w3-col s3 w3-right-align mgr10">첫번째 숫자 : </label>
                     <input type="text" name="one" id="one" class="w3-input w3-col s7 w3-border">
                 </div>
                 <div class="w3-col w3-margin">
-                    <label for="two" class="w3-col s3 w3-right-algin mgr10">두번째 숫자 : </label>
+                    <label for="two" class="w3-col s3 w3-right-align mgr10">두번째 숫자 : </label>
                     <input type="text" name="two" id="two" class="w3-input w3-col s7 w3-border">
                 </div>
             </div>
             <footer class="w3-col">
-                <p class="w3-button w3-orange w3-hover-deep-orange" id="reset">reset</p>
-                <p class="w3-button w3-blue w3-hover-pink">결과 출력</p>
+                <p class="w3-half w3-button w3-orange w3-hover-deep-orange" id="reset" style="margin-top: 0px;">reset</p>
+                <p class="w3-half w3-button w3-blue w3-hover-pink" id="print" style="margin-top: 0px;">결과 출력</p>
             </footer>
         </div>
     </div>
